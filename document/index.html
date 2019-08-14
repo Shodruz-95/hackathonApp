@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>How to contribute to this book - ATLAS Open Data hackathon 2019</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "How to contribute to this book";
+    var mkdocs_page_input_path = "document.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ATLAS Open Data hackathon 2019</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../datasets/">Datasets</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../C++/cpp/">C++ framework</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../C++/times/">C++ notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Python/python/">Python framework</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vm/">Virtual Machines</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vm/appendix/">Installing a generic Ubuntu VM</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">How to contribute to this book</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#building-your-project-documentation">Building your project documentation</a></li>
+    
+
+    <li class="toctree-l2"><a href="#mkdocs-installation">Mkdocs installation</a></li>
+    
+
+    <li class="toctree-l2"><a href="#getting-started-to-edit">Getting started to edit</a></li>
+    
+
+    <li class="toctree-l2"><a href="#using-the-git-to-commit-your-changes">Using the Git to commit your changes</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ATLAS Open Data hackathon 2019</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>How to contribute to this book</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="building-your-project-documentation">Building your project documentation</h1>
+<p><a href="https://www.mkdocs.org"><strong>MkDocs</strong></a> is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation.
+Documentation source files are written in <strong>Markdown</strong>, and configured with a single YAML configuration file.</p>
+<h1 id="mkdocs-installation">Mkdocs installation</h1>
+<ul>
+<li><strong>Prerequisite: Python and Pip</strong></li>
+</ul>
+<p>In order to manually install MkDocs you'll need Python installed on your system, as well as the Python package manager, pip. You can check if you have these already installed from the command line:</p>
+<p><strong>On Windows:</strong></p>
+<pre><code>C:\Users\User&gt;python --version
+Python 3.5.4
+C:\Users\User&gt;pip --version
+pip 9.0.1
+</code></pre>
+
+<p><strong>On MacOS or Linux</strong></p>
+<pre><code>$ python --version
+Python 2.7.2
+$ pip --version
+pip 1.5.2
+</code></pre>
+
+<ul>
+<li><strong>Installing Python</strong></li>
+</ul>
+<p>Install <a href="https://www.python.org/">Python</a> by downloading an installer appropriate for your system from <a href="https://www.python.org/downloads/">python.org</a> and running it.</p>
+<p><strong>Note:</strong>
+If you are installing Python on Windows, be sure to check the box to have Python added to your PATH if the installer offers such an option (it's normally off by default).</p>
+<p><img alt="path" src="https://www.mkdocs.org/img/win-py-install.png" /></p>
+<ul>
+<li><strong>Installing Pip</strong></li>
+</ul>
+<p>If you're using a recent version of Python, the Python package manager, pip, is most likely installed by default. However, you may need to upgrade pip to the lasted version:
+<code>pip install --upgrade pip</code></p>
+<p>If you need to install pip for the first time, download get-pip.py. Then run the following command to install it:
+<code>python get-pip.py</code></p>
+<ul>
+<li><strong>Installing MkDocs</strong></li>
+</ul>
+<p>Install the <code>mkdocs</code> package using pip:</p>
+<pre><code>pip install mkdocs
+</code></pre>
+
+<p>You should now have the <code>mkdocs</code> command installed on your system. Run <code>mkdocs--version</code> to check whether successfully installed.</p>
+<p><strong>On Windows:</strong></p>
+<pre><code>C:\Users\User&gt;mkdocs --version
+mkdocs, version 1.0.4
+</code></pre>
+
+<p><strong>On MacOS or Linux</strong></p>
+<pre><code>$ mkdocs --version
+mkdocs, version 0.15.3
+</code></pre>
+
+<h1 id="getting-started-to-edit">Getting started to edit</h1>
+<ul>
+<li>Clone this documentation to your device by git</li>
+</ul>
+<p>Clone with ssh:</p>
+<pre><code>git clone ssh://git@gitlab.cern.ch:7999/atlas-outreach-data-tools/hackathon-docs.git
+</code></pre>
+
+<p>Clone with https:</p>
+<pre><code>git clone https://gitlab.cern.ch/atlas-outreach-data-tools/hackathon-docs.git
+</code></pre>
+
+<p>In your <code>hackathon-docs</code> folder, you will see a configuration file named <code>mkdocs.yml</code>, and a folder named <code>docs</code> that will contain your documentation source files.</p>
+<p><img alt="folder1" src="https://github.com/veritasalice/MarkdownPhotos/blob/master/folder1.png?raw=true" /></p>
+<p>Right now the <code>docs</code> folder just contains all the documentation pages, such as  <code>index.md</code>, <code>datasets.md</code> and the folders where the pages are saved.</p>
+<p><img alt="folder2" src="https://github.com/veritasalice/MarkdownPhotos/blob/master/folder2.png?raw=true" /></p>
+<p>MkDocs comes with a built-in dev-server that lets you preview your documentation as you work on it. Make sure you're in the same directory as the <code>mkdocs.yml</code> configuration file, and then start the server by running the <code>mkdocs serve</code> command:</p>
+<pre><code>C:\Users\User\hackathon\hackathon-docs&gt;mkdocs serve
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+[I 190705 15:13:53 server:296] Serving on http://127.0.0.1:8000
+[I 190705 15:13:53 handlers:62] Start watching changes
+[I 190705 15:13:53 handlers:64] Start detecting changes
+</code></pre>
+
+<p>Open up <code>http://127.0.0.1:8000/</code> in your browser, and you'll see the pages you cloned being displayed:</p>
+<p><img alt="pic3" src="https://github.com/veritasalice/MarkdownPhotos/blob/master/yourDoc3.png?raw=true" /></p>
+<p>Use the editor you like to edit the files in <code>docs</code> and your changes will be displayed when saving them.</p>
+<h1 id="using-the-git-to-commit-your-changes">Using the Git to commit your changes</h1>
+<p>By far, the most widely used modern version control system in the world today is Git.
+In Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li><a href="https://git-scm.com/downloads">Download</a> and install Git</li>
+<li><a href="https://gitlab.cern.ch/">Apply for a Gitlab account</a></li>
+</ul>
+<p><strong>The working flow of Git:</strong></p>
+<ul>
+<li>Initialize your repository with <code>git init[directory]</code></li>
+<li>Clone a repository onto your local machine with <code>git clone [URL]</code></li>
+<li>Edit the docs using Mkdocs</li>
+<li>Stage all changes for the next conmmit with <code>git add [directory]</code></li>
+<li>Commit the staged snapshot with <code>git commit -m ["commit message"]</code></li>
+<li>If others have modified it, you can <strong>check the updates</strong> with <code>git fetch</code> and <strong>update the resource</strong> with <code>git pull</code>.</li>
+<li>Show unstaged changes between your index and working directory with <code>git diff</code></li>
+<li>Review your changes before submitting with <code>git status</code></li>
+<li>Push your changes to the remote Gitlab repository with <code>git push</code></li>
+</ul>
+<p><img alt="gitFlow" src="https://i.stack.imgur.com/ODFYa.png" /></p>
+<p>Reference to <a href="file:///C:/Users/User/Downloads/atlassian-git-cheatsheet.pdf">git cheet sheet</a> for details</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../vm/appendix/" class="btn btn-neutral" title="Installing a generic Ubuntu VM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../vm/appendix/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

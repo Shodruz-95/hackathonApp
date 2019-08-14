@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Virtual Machines - ATLAS Open Data hackathon 2019</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Virtual Machines";
+    var mkdocs_page_input_path = "vm\\index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ATLAS Open Data hackathon 2019</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../datasets/">Datasets</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../C++/cpp/">C++ framework</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../C++/times/">C++ notes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Python/python/">Python framework</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Virtual Machines</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#about">About</a></li>
+    
+
+    <li class="toctree-l2"><a href="#vm-with-root-and-jupyter">VM with ROOT and Jupyter</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="appendix/">Installing a generic Ubuntu VM</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../document/">How to contribute to this book</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ATLAS Open Data hackathon 2019</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Virtual Machines</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="about">About</h2>
+<p>This is an analysis code that may be used to analyse the data of the ATLAS published dataset.</p>
+<ul>
+<li><strong>Why do you need a virtual machine?</strong></li>
+</ul>
+<p>Virtualization allows you to create an operating system in the operating system and test programs without installing them on the host machine. Also virtualization allows you to do penetration testing.</p>
+<p>There are a generous amount of Virtual Machines (VM): <strong>ORACLE VirtualBox</strong>, <strong>Windows Visual</strong>, <strong>VMware Workstation</strong>, <strong>Colinux</strong>, <strong>AlphaVM-Pro</strong>, <strong>DOSBox</strong>, <strong>Linux-VServer</strong>, <strong>PearPC</strong>, <strong>VirtualLogix VLX</strong> etc. (read more about VM on <a href="https://en.wikipedia.org/wiki/Comparison_of_platform_virtualization_software">wikipedia</a>).
+Among these VM, Oracle VirtualBox is one of the best. VirtualBox is a virtualization software product for Microsoft Windows, Linux, FreeBSD, Mac OS X, Solaris / OpenSolaris, ReactOS, DOS and others.</p>
+<p>Collaboration Software Products <strong>-</strong> Top To Look For:</p>
+<p>— <em>USB support - VirtualBox implements a virtual USB controller and supports connecting devices to a virtual machine via USB.</em></p>
+<p>— <em>Built-in <a href="https://en.wikipedia.org/wiki/Remote_Desktop_Protocol">RDP</a> server, as well as support for USB client devices over RDP — the user can connect to the virtual machine remotely using an RDP-compatible client.</em></p>
+<p>— <em><a href="https://en.wikipedia.org/wiki/ISCSI">iSCSI</a> initiator - VirtualBox contains an integral iSCSI initiator that makes it possible to use an iSCSI worker as a virtual disk without the need to support the iSCSI guest system.</em></p>
+<p>— <em>Support for various types of network interaction (NAT, Host Networking via Bridged, Internal).</em></p>
+<p>— <em>Support for Shared Folders, allowing you to share files between the host and guest systems.</em></p>
+<p>— <em>and finally VirtualBox is a free to use.</em></p>
+<p>Also with VirtualBox, you can use Windows, Linux, Mac OS X, Solaris to run their bundles on one computer. Each virtual machine is called a guest, and your main computer (the OS installed on it) is called a host. The point is that you can run several guest systems in the host’s operating system (direct inside it).</p>
+<h2 id="vm-with-root-and-jupyter">VM with ROOT and Jupyter</h2>
+<ul>
+<li><strong>VirtualBox installation</strong></li>
+</ul>
+<p>Follow the instructions below to install the VM on your computer:</p>
+<p><em>- What version to download</em>? Assumption of what your operating system. In this review we will explain how to install VirtualBox on Windows 10. Installing VirtualBox on all versions of Windows is identical. First download the installation file.</p>
+<p>— Download VirtualBox you can free on the <a href="https://www.virtualbox.org/">official website</a>.</p>
+<p>— So, after you have downloaded the latest version of Virtual Box, let's proceed to the installation. Find the downloaded file in your computer (usually the downloaded file is in <strong>С:\Users\User\Downloads\"filename"</strong>), run the program and click "Next".</p>
+<p><img alt="path" src="images/fig-1.png" /></p>
+<p>— After that, the component selection window will appear. Without changing anything, click "Next".</p>
+<p><img alt="path" src="images/fig-2.png" /></p>
+<p>— In the next window, without any changing click "Next"</p>
+<p><img alt="path" src="images/fig-3.png" /></p>
+<p>— Now a window will appear that says that the Internet will be temporarily disabled during the installation of the program. Click "Yes".</p>
+<p><img alt="path" src="images/fig-4.png" /></p>
+<p>— And click "Install" to begin the installation.</p>
+<p><img alt="path" src="images/fig-5.png" /></p>
+<p>— After the installation process is complete, click "Finish"</p>
+<p><img alt="path" src="images/fig-6.png" /></p>
+<p>— Now you will see a clean window of your virtual machine without any operating systems:</p>
+<p><img alt="path" src="images/fig-6-1.png" /></p>
+<ul>
+<li><strong>Configure VirtualBox</strong></li>
+</ul>
+<p>— If you have English installed on your system, the program will automatically change the interface language to English when you first start it. If this does not happen, go to the menu <em>“File” -&gt; “Settings\or/Preferences”</em> and on the <em>Languages</em> tab select your <em>language</em>.</p>
+<p><img alt="path" src="images/fig-7.png" /></p>
+<p>In principle, in the settings of VirtualBox there is nothing more to change.</p>
+<ul>
+<li><strong>How to install an operating system in your virtual machine?</strong></li>
+</ul>
+<p>First, download the ready operating system (.ova file with ROOT and Jupiter inside) from <a href="http://universidad.ch/CEVALE2VE/IFP-2019/student-material/ATLAS-OpenData-VM-ROOT6-Xubuntu-15.04_light-sever.ova"><strong> <em><code>this link</code></em> </strong></a>!</p>
+<hr />
+<p>If you want to install your operating system from scratch, then see how to do it in <a href="appendix/"><strong><em>this section</em></strong></a>.</p>
+<hr />
+<p>— After you have downloaded the ready file, start the VirtualBox. Go to the menu <strong><em>"File"</em></strong> <strong>-&gt;</strong> <strong><em>“Import Appliance...”</em></strong> (or perform the same function with the combination of buttons: <strong>"Ctrl" + "I"</strong>).</p>
+<p><img alt="path" src="images/fig-7-1.png" /></p>
+<p>— In the window that appears, select the downloaded ".ova" file from the <strong>Downloads</strong> folder and click "Next":</p>
+<p><img alt="path" src="images/fig-7-2.png" /></p>
+<p>— After click "Import" without any changes:</p>
+<p><img alt="path" src="images/fig-7-3.png" /></p>
+<p>— The operating system is importing:</p>
+<p><img alt="path" src="images/fig-7-4.png" /></p>
+<p>— Now your Virtual Machine with Linux operating system is ready to work, start it by clicking <img alt="path" src="images/fig-7-5.png" /> and use:</p>
+<p><img alt="path" src="images/fig-7-6.png" /></p>
+<ul>
+<li><strong>Jupiter terminal start and Notebooks run errors in VM</strong></li>
+</ul>
+<p>After starting your VM and running Notebooks, you may encounter the following <strong>error</strong> (look at the red frames in the photo below):</p>
+<p><img alt="path" src="images/fig-12-3.png" /></p>
+<p>To solve this <strong>error</strong>, follow these simple steps:</p>
+<p>— Сlose notebooks and terminal</p>
+<p>— Run terminal again and type this code <strong> <code>./run-server-jupyter.sh</code> </strong> to start Jupiter</p>
+<p><img alt="path" src="images/fig-12-4.png" /></p>
+<p>— You have restarted your terminal and server successfully</p>
+<p><img alt="path" src="images/fig-12-5.png" /></p>
+<p>— Open notebook in your browser and restart <em>kernel</em> by clicking restart button</p>
+<p><img alt="path" src="images/fig-12-6.png" /></p>
+<p>Now your terminal and server should work. Notebook also runs without errors.</p>
+<p><img alt="path" src="images/fig-12-7.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="appendix/" class="btn btn-neutral float-right" title="Installing a generic Ubuntu VM">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Python/python/" class="btn btn-neutral" title="Python framework"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Python/python/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="appendix/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-08-09 12:08:05
+-->
